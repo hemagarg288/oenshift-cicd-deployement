@@ -60,7 +60,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    podman push ${dockerimagename} docker.io/${dockerimagename}:latest
+                    podman push ${dockerimagename} docker.io/${dockerimagename}:latest_openshift
                     '''
                 }
             }
