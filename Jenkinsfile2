@@ -70,7 +70,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    oc login --token=sha256~hWU65JlnN4yQOEVxY5jbaPJycGE4Pl8j6iipDpQw61g --server=https://api.natwest.priartw.com:6443 --insecure-skip-tls-verify
+                    oc login --token=sha256~9WrMCvNjKnivwMVbP9C0Gf3w4md8IwoKsoYn5nZr8Fo --server=https://api.natwest.priartw.com:6443 --insecure-skip-tls-verify
                     oc project ${namespace}
                     oc apply -f ${yamlFile}  # Apply the YAML file directly
                     oc rollout status deployment/nodeapp-deployment
