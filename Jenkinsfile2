@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        dockerimagename = "hemagarg288/myimage"
+        dockerimagename = "hemagarg288/openshift"
         registryCredential = 'dockerhublogin'  // Jenkins credential ID for DockerHub
         namespace = 'team1' // OpenShift namespace
         yamlFile = 'openshiftdeploymentfile.yaml' // Path to your YAML file
@@ -60,7 +60,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    podman push ${dockerimagename} docker.io/${dockerimagename}:latest_openshift
+                    podman push ${dockerimagename} docker.io/${dockerimagename}:latest
                     '''
                 }
             }
