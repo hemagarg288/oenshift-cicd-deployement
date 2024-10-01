@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nodeserver
-        image: ramann123/myimage:latest
+        image: hemagarg288/myimage:latest_openshift
         ports:
         - containerPort: 3000
 
